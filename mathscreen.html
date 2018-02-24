@@ -6,41 +6,41 @@
   </head>
   <body>
     <h2>Hold up! We need you to answer a few questions first.</h2>
-	<button type="button" onclick="myFunction()">Do Problems</button>
+  <button type="button" onclick="myFunction()">Do Problems</button>
 
-	  <table>
-	    <tbody>
-		  <tr>
-		    <td><p id="demo 1"></p></td>
-			<td><p id="demo 2"></p></td>
-			<td><p id="demo 3"></p></td>
-		  </tr>
-		  <tr>
-		    <td><p id="demo 4"></p></td>
-			<td><p id="demo 5"></p></td>
-			<td><p id="demo 6"></p></td>
-		  </tr>
-		  <tr>
-		    <td><p id="demo 7"></p></td>
-			<td><p id="demo 8"></p></td>
-			<td><p id="demo 9"></p></td>
-		  </tr>
-		  <tr>
-		    <td><p id="demo 10"></p></td>
-			<td><p id="demo 11"></p></td>
-			<td><p id="demo 12"></p></td>
-		  </tr>
-		</tbody>
-	  </table>
+    <table style="text-align: left; width: 280px; height: 190px;" border="1" cellpadding="2" cellspacing="2">
+      <tbody>
+      <tr>
+        <td><p id="demo 1"></p></td>
+      <td><p id="demo 2"></p></td>
+      <td><p id="demo 3"></p></td>
+      </tr>
+      <tr>
+        <td><p id="demo 4"></p></td>
+      <td><p id="demo 5"></p></td>
+      <td><p id="demo 6"></p></td>
+      </tr>
+      <tr>
+        <td><p id="demo 7"></p></td>
+      <td><p id="demo 8"></p></td>
+      <td><p id="demo 9"></p></td>
+      </tr>
+      <tr>
+        <td><p id="demo 10"></p></td>
+      <td><p id="demo 11"></p></td>
+      <td><p id="demo 12"></p></td>
+      </tr>
+    </tbody>
+    </table>
 
-	  <script>
-		  function myFunction() {
-			for (i=0; i < 12; i++) {
-				var x = Math.floor((Math.random() * 10) + 1);
-				var y = Math.floor((Math.random() * 10) + 1);
-				document.getElementById("demo " + (i+1).toString()).innerHTML = x.toString() + " &times; " + y.toString();
-			}
-		  }
-	  </script>
+    <script>
+      function myFunction() {
+      for (i=0; i < 12; i++) {
+        var x = Math.floor((Math.random() * 10) + 1);
+        var y = Math.floor((Math.random() * 10) + 1);
+        document.getElementById("demo " + (i+1).toString()).innerHTML = x.toString() + " &times; " + y.toString();
+      }
+      }
+    </script>
   </body>
 </html>
