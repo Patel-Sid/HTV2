@@ -1,84 +1,15 @@
 {
-  // Required
   "manifest_version": 2,
-  "name": "My Extension",
-  "version": "versionString",
 
-  // Recommended
-  "default_locale": "en",
-  "description": "A plain text description",
-  "icons": "test",
+  "name": "NumLock",
+  "description": "test",
+  "version": "0.1",
 
-  // Pick one (or none)
-  "browser_action": "test",
-  "page_action": "test",
-
-  // Optional
-  "action": "test",
-  "author": "test",
-  "automation": "test",
-  "background": {
-    // Recommended
-    "persistent": false
+  "browser_action": {
+    "default_popup": "popup.html"
   },
-  "background_page": "test",
-  "chrome_settings_overrides": "test",
-  "chrome_ui_overrides": {
-    "bookmarks_ui": {
-      "remove_bookmark_shortcut": true,
-      "remove_button": true
-    }
-  },
-  "chrome_url_overrides": "test",
-  "commands": "test",
-  "content_capabilities": "test",
-  "content_scripts": ["test"],
-  "content_security_policy": "policyString",
-  "converted_from_user_script": "test",
-  "current_locale": "test",
-  "declarative_net_request": "test",
-  "devtools_page": "devtools.html",
-  "event_rules": ["test"],
-  "externally_connectable": {
-    "matches": ["*://*.example.com/*"]
-  },
-  "file_browser_handlers": ["test"],
-  "file_system_provider_capabilities": {
-    "configurable": true,
-    "multiple_mounts": true,
-    "source": "network"
-  },
-  "homepage_url": "http://path/to/homepage",
-  "import": [{"id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}],
-  "incognito": "spanning, split, or not_allowed",
-  "input_components": "test",
-  "key": "publicKey",
-  "minimum_chrome_version": "versionString",
-  "nacl_modules": ["test"],
-  "oauth2": "test",
-  "offline_enabled": true,
-  "omnibox": {
-    "keyword": "aString"
-  },
-  "optional_permissions": ["tabs"],
-  "options_page": "options.html",
-  "options_ui": {
-    "chrome_style": true,
-    "page": "options.html"
-  },
-  "permissions": ["tabs"],
-  "platforms": "test",
-  "requirements": "test",
-  "sandbox": ["test"],
-  "short_name": "Short Name",
-  "signature": "test",
-  "spellcheck": "test",
-  "storage": {
-    "managed_schema": "schema.json"
-  },
-  "system_indicator": "test",
-  "tts_engine": "test",
-  "update_url": "http://path/to/updateInfo.xml",
-  "version_name": "aString",
-  "web_accessible_resources": ["test"]
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
 }
