@@ -7,42 +7,42 @@
   // Recommended
   "default_locale": "en",
   "description": "A plain text description",
-  "icons": {...},
+  "icons": "test",
 
   // Pick one (or none)
-  "browser_action": {...},
-  "page_action": {...},
+  "browser_action": "test",
+  "page_action": "test",
 
   // Optional
-  "action": ...,
-  "author": ...,
-  "automation": ...,
+  "action": "test",
+  "author": "test",
+  "automation": "test",
   "background": {
     // Recommended
     "persistent": false
   },
-  "background_page": ...,
-  "chrome_settings_overrides": {...},
+  "background_page": "test",
+  "chrome_settings_overrides": "test",
   "chrome_ui_overrides": {
     "bookmarks_ui": {
       "remove_bookmark_shortcut": true,
       "remove_button": true
     }
   },
-  "chrome_url_overrides": {...},
-  "commands": {...},
-  "content_capabilities": ...,
-  "content_scripts": [{...}],
+  "chrome_url_overrides": "test",
+  "commands": "test",
+  "content_capabilities": "test",
+  "content_scripts": ["test"],
   "content_security_policy": "policyString",
-  "converted_from_user_script": ...,
-  "current_locale": ...,
-  "declarative_net_request": ...,
+  "converted_from_user_script": "test",
+  "current_locale": "test",
+  "declarative_net_request": "test",
   "devtools_page": "devtools.html",
-  "event_rules": [{...}],
+  "event_rules": ["test"],
   "externally_connectable": {
     "matches": ["*://*.example.com/*"]
   },
-  "file_browser_handlers": [...],
+  "file_browser_handlers": ["test"],
   "file_system_provider_capabilities": {
     "configurable": true,
     "multiple_mounts": true,
@@ -51,11 +51,11 @@
   "homepage_url": "http://path/to/homepage",
   "import": [{"id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}],
   "incognito": "spanning, split, or not_allowed",
-  "input_components": ...,
+  "input_components": "test",
   "key": "publicKey",
   "minimum_chrome_version": "versionString",
-  "nacl_modules": [...],
-  "oauth2": ...,
+  "nacl_modules": ["test"],
+  "oauth2": "test",
   "offline_enabled": true,
   "omnibox": {
     "keyword": "aString"
@@ -67,18 +67,18 @@
     "page": "options.html"
   },
   "permissions": ["tabs"],
-  "platforms": ...,
-  "requirements": {...},
-  "sandbox": [...],
+  "platforms": "test",
+  "requirements": "test",
+  "sandbox": ["test"],
   "short_name": "Short Name",
-  "signature": ...,
-  "spellcheck": ...,
+  "signature": "test",
+  "spellcheck": "test",
   "storage": {
     "managed_schema": "schema.json"
   },
-  "system_indicator": ...,
-  "tts_engine": {...},
+  "system_indicator": "test",
+  "tts_engine": "test",
   "update_url": "http://path/to/updateInfo.xml",
   "version_name": "aString",
-  "web_accessible_resources": [...]
+  "web_accessible_resources": ["test"]
 }
