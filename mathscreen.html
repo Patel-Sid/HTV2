@@ -96,7 +96,11 @@
       }
       function showAnswer(){
         for (i=0; i< 12; i++) {
-        document.getElementById("answer "+(i+1).toString()).innerHTML = answers[i];
+		  document.getElementById("answer "+(i+1).toString()).innerHTML = answers[i];
+		  var isEqual = (document.getElementById("text "+(i+1).toString()).value == answers[i].toString());
+		  if (!isEqual) {
+		    document.getElementById("answer "+(i+1).toString()).style.color = "red";
+		  }
       }
       }
     </script>
