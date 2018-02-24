@@ -7,5 +7,18 @@
   <body>
     <h2>Hold up! We need you to answer a few questions first.</h2>
 	<button type="button">Do Problems</button>
+
+    <p>Click the button to display a random number between 1 and 10.</p>
+
+  <button onclick="myFunction()">Try it</button>
+
+  <p id="demo"></p>
+
+  <script>
+  function myFunction() {
+      var x = Math.floor((Math.random() * 10) + 1);
+      document.getElementById("demo").innerHTML = x;
+  }
+  </script>
   </body>
 </html>
