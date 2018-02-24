@@ -6,19 +6,28 @@
   </head>
   <body>
     <h2>Hold up! We need you to answer a few questions first.</h2>
-	<button type="button">Do Problems</button>
+	<button type="button" onclick="myFunction()">Do Problems</button>
 
-    <p>Click the button to display a random number between 1 and 10.</p>
+	  <p id="demo 1"></p>
+	  <p id="demo 2"></p>
+	  <p id="demo 3"></p>
+	  <p id="demo 4"></p>
+	  <p id="demo 5"></p>
+	  <p id="demo 6"></p>
+	  <p id="demo 7"></p>
+	  <p id="demo 8"></p>
+	  <p id="demo 9"></p>
+	  <p id="demo 10"></p>
+	  <p id="demo 11"></p>
+	  <p id="demo 12"></p>
 
-  <button onclick="myFunction()">Try it</button>
-
-  <p id="demo"></p>
-
-  <script>
-  function myFunction() {
-      var x = Math.floor((Math.random() * 10) + 1);
-      document.getElementById("demo").innerHTML = x;
-  }
-  </script>
+	  <script>
+		  function myFunction() {
+			for (i=0; i < 12; i++) {
+				var x = Math.floor((Math.random() * 10) + 1);
+				document.getElementById("demo " + (i+1).toString()).innerHTML = x;
+			}
+		  }
+	  </script>
   </body>
 </html>
