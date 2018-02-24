@@ -8,7 +8,6 @@ chrome.webRequest.onBeforeRequest.addListener(
             "*://google.ca/*",
             "*://www.google.ca/*"
         ],
-        types: ["main_frame", "sub_frame", "stylesheet", "script", "image", "object", "xmlhttprequest", "other"]
     },
     ["blocking"]
 );
