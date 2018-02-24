@@ -6,7 +6,7 @@
   </head>
   <body>
     <h2>Hold up! We need you to answer a few questions first.</h2>
-  <button type="button" onclick="myFunction()">Do Problems</button>
+  <button type="button" onclick="makeProblems()">Do Problems</button>
   <button type="button" onclick="showAnswer()">Show Answers</button>
   <a onclick="window.location.href=this">Update</a>
 
@@ -85,24 +85,27 @@
 
     <script>
     var answers = [];
-      function myFunction() {
+      function makeProblems() {
       answers = [];
       for (i=0; i < 12; i++) {
         var x = Math.floor((Math.random() * 10) + 1);
         var y = Math.floor((Math.random() * 10) + 1);
         document.getElementById("demo " + (i+1).toString()).innerHTML = x.toString() + " &times; " + y.toString();
         answers.push(x*y);
+		document.getElementById("answer " + (i+1).toString()).style.visibility = "hidden";
+		document.getElementById("text " + (i+1).toString()).value = "";
       }
       
       }
       function showAnswer(){
         for (i=0; i< 12; i++) {
+		  document.getElementById("answer "+(i+1).toString()).style.visibility = "visible";
 		  document.getElementById("answer "+(i+1).toString()).innerHTML = answers[i];
 		  var isEqual = (document.getElementById("text "+(i+1).toString()).value == answers[i].toString());
 		  if (!isEqual) {
 		    document.getElementById("answer "+(i+1).toString()).style.color = "red";
 		  }
-      }
+        }
       }
     </script>
   </body>
