@@ -6,7 +6,7 @@
   </head>
   <body>
     <h2>Hold up! We need you to answer a few questions first.</h2>
-  <button type="button" onclick="makeProblems()">Do Problems</button>
+  <button id="startButton" type="button" onclick="makeProblems()">Do Problems</button>
   <button type="button" onclick="showAnswer(true)">Show Answers</button>
 
     <table style="text-align: left; width: 280px; height: 190px;" border="1" cellpadding="2" cellspacing="2">
@@ -82,13 +82,18 @@
     </tbody>
     </table>
 	
-	<!-- Display the countdown timer in an element -->
+	<!-- Statements/timers conditional on how you answered questions -->
 	<p id="ranOutOfTime"></p>
 	<p id="questionsStatus"></p>
+	<p id="pTimer"></p>
 
     <script>
+	//global variables
     var answers = [];
+	var answersCorrect = 0;
+	
       function makeProblems() {
+	  document.getElementById("startButton").style.visibility = "hidden";
 	  questionTimer();
       answers = [];
       for (i=0; i < 12; i++) {
@@ -119,8 +124,11 @@
 			document.getElementById("ranOutOfTime").style.display = "none";
 			if (allRight) {
 				document.getElementById("questionsStatus").innerHTML = "You succeeded!";
+				answersCorrect = 1;
 			} else {
 				document.getElementById("questionsStatus").innerHTML = "One or more questions are wrong.";
+				answersCorrect = -1;
+				punishmentTimer();
 			}
 		  }
       }
@@ -150,9 +158,44 @@
 			clearInterval(x);
 			showAnswer(false);
 			document.getElementById("ranOutOfTime").innerHTML = "You ran out of time!";
+			if (answersCorrect == 0) {
+			  answersCorrect = -1;
+			  punishmentTimer();
+			}
 		  }
 	}, 1000);
   }
+</script>
+
+<script>
+	function punishmentTimer() {
+	  document.getElementById("pTimer").style.visibility = "visible";
+	  // Get todays date and time
+	  var now = new Date().getTime();
+	  // Set the date we're counting down to
+	  var countDownDate = now + 300000;
+	  
+	  var x = setInterval(function() {
+		  var new_now = new Date().getTime();
+		  // Find the distance between now an the count down date
+		  var distance = countDownDate - new_now;
+
+		  // Time calculations for days, hours, minutes and seconds
+		  var seconds = Math.floor((distance) / 1000);
+
+		  // Display the result in the element with id="demo"
+		  document.getElementById("pTimer").innerHTML = "You can try again in " + seconds + "s ";
+
+		  // If the count down is finished, write some text 
+		  if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("pTimer").style.visibility = "hidden";
+			document.getElementById("startButton").style.visibility = "visible";
+			document.getElementById("startButton").innerHTML = "Try Again";
+			answersCorrect = 0;
+			}
+		}, 1000)
+	}
 </script>
   </body>
 </html>
