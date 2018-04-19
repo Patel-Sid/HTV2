@@ -1,6 +1,6 @@
 {
   "name": "Redirector Test",
-  "description": "Redirect Google to a different host....",
+  "description": "Redirect Google to a different host.",
   "version": "0.1",
   "manifest_version": 2,
   "background": {"scripts":["bg.js"]},
@@ -8,6 +8,9 @@
     "webRequest",
     "*://google.ca/*",
     "*://www.google.ca/*",
-    "webRequestBlocking"
+    "*://youtube.com/*", 
+    "*://www.youtube.com/*",
+    "webRequestBlocking",
+  "storage"
   ]
 }

@@ -2,14 +2,21 @@
   "manifest_version": 2,
 
   "name": "NumLock",
+  "content_security_policy": "default-src 'self' 'sha256-naST7UuUCaoDf6fImM+Nk/4ZMUTX3iAmvtMsQ/YiZN8='",
   "description": "test",
   "version": "0.1",
+  "background": {"scripts":["common.js","bg.js"]},
+
+  "icons": { "128": "nl128.png" },
 
   "browser_action": {
     "default_popup": "popup.html"
   },
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+	"webRequest",
+    "webRequestBlocking",
+	"tabs"
   ]
 }
